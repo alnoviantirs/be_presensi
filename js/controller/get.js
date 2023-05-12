@@ -3,7 +3,7 @@ import {
   getRandomColor,
   getRandomColorName,
 } from "https://bukulapak.github.io/image/process.js";
-import { isiTabel } from "../temp/table.js";
+import { isiTabel } from "../temp/tabel.js";
 export function isiTablePresensi(results) {
   results.forEach(isiRow);
 }
@@ -27,7 +27,7 @@ function isiRow(value) {
     )
     .replace(
       "#JAMKERJA#",
-      value.biodata.hari_kerja ? value.biodata.jam_kerja[0].durasi : "JAMKERJA"
+      value.biodata.jam_kerja ? value.biodata.jam_kerja[0].durasi : "#JAMKERJA"
     )
     .replace(
       "#JAMMASUK#",
