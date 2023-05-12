@@ -31,15 +31,15 @@ function isiRow(value) {
     )
     .replace(
       "#JAMMASUK#",
-      value.biodata.hari_kerja
-        ? value.biodata.jam_kerja[0].jammasuk
-        : "JAMMASUK"
+      value.biodata.jam_kerja
+        ? value.biodata.jam_kerja[0].jam_masuk
+        : "#JAMMASUK"
     )
     .replace(
       "#JAMKELUAR#",
-      value.biodata.hari_kerja
-        ? value.biodata.jam_kerja[0].jamkeluar
-        : "JAMKELUAR"
+      value.biodata.jam_kerja
+        ? value.biodata.jam_kerja[0].jam_keluar
+        : "#JAMMKELUAR"
     )
     .replace("#WARNA#", getRandomColor())
     .replace(/#WARNALOGO#/g, getRandomColorName());
